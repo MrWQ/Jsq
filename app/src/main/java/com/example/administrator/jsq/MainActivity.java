@@ -50,7 +50,11 @@ public class MainActivity extends AppCompatActivity  {
         Button buttonx3=(Button)findViewById(R.id.buttonx3);
         Button buttonloge=(Button)findViewById(R.id.buttonloge);
         Button buttonlog10=(Button)findViewById(R.id.buttonlog10);
-        Button buttonsqrt=(Button)findViewById(R.id.buttonsqrt);
+        Button buttonsqrt=(Button)findViewById(R.id.buttonsqrt);//根号
+        Button buttonto2=(Button)findViewById(R.id.buttonto2);
+        Button buttonto8=(Button)findViewById(R.id.buttonto8);
+        Button buttonto16=(Button)findViewById(R.id.buttonto16);
+        Button button2to10=(Button)findViewById(R.id.button2to10);//2转10进制
 
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -235,15 +239,43 @@ public class MainActivity extends AppCompatActivity  {
                 out.setText(String.valueOf(s));
             }
         });
+        buttonto2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Integer i=Integer.parseInt(in.getText().toString());
+                out.setText(Integer.toBinaryString(i));
+            }
+        });
+        buttonto8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Integer i=Integer.parseInt(in.getText().toString());
+                out.setText(Integer.toOctalString(i));
+            }
+        });
+        buttonto16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Integer i=Integer.parseInt(in.getText().toString());
+                out.setText(Integer.toHexString(i));
+            }
+        });
+        button2to10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Integer i=Integer.valueOf(in.getText().toString(),2);
+                out.setText(String.valueOf(i));
+            }
+        });
         buttonequal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 in.append("=");
                 char[] list = in.getText().toString().toCharArray();
                 int head =0;//head 表示开始（包含） last 表示尾（不包含）
-                double num=0;
-                double r=0;
+                double num=0;//存放取数
                 char op1,op2,opresult;
+                double r=0;
                 double num1,num2;
                 boolean flag =false;//字符标志位
                 for (int last=0;last<list.length;last++) {
