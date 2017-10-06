@@ -2,6 +2,9 @@ package com.example.administrator.jsq;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,6 +18,27 @@ public class MainActivity extends AppCompatActivity  {
     Stack numstack =new Stack();//存放操作数
     Stack opstack = new Stack();//存放操作符
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {//初始化菜单
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {//处理菜单选择事件
+        int id=item.getItemId();
+        switch (id){
+            case R.id.menuhelp:
+                Toast.makeText(this,"这是帮助",Toast.LENGTH_LONG).show();
+                break;
+            case  R.id.menuexit:
+//                Toast.makeText(this,"即将退出",Toast.LENGTH_LONG).show();
+                finish();
+
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
