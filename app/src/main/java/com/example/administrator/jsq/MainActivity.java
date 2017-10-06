@@ -202,98 +202,190 @@ public class MainActivity extends AppCompatActivity  {
         buttonsin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double s=Double.parseDouble(in.getText().toString());
-                s=Math.sin(s);
-                out.setText(String.valueOf(s));
+                try {
+
+
+                if(in.getText()==""){
+                    Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
+                }else {
+                    double s = Double.parseDouble(in.getText().toString());
+                    s = Math.sin(s);
+                    out.setText(String.valueOf(s));
+                }
+                }catch (Exception e){ Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();}
             }
         });
         buttoncos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double s=Double.parseDouble(in.getText().toString());
-                s=Math.cos(s);
-                out.setText(String.valueOf(s));
+                try {
+
+
+                if(in.getText()==""){
+                    Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
+                }else {
+                    double s = Double.parseDouble(in.getText().toString());
+                    s = Math.cos(s);
+                    out.setText(String.valueOf(s));
+                }
+                }catch (Exception e){ Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();}
             }
         });
         buttontan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double s=Double.parseDouble(in.getText().toString());
-                s=Math.tan(s);
-                out.setText(String.valueOf(s));
+                try {
+                if(in.getText()==""){
+                    Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
+                }else {
+                    double s = Double.parseDouble(in.getText().toString());
+                    s = Math.tan(s);
+                    out.setText(String.valueOf(s));
+                }
+                }catch (Exception e){ Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();}
             }
         });
         buttonx2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double s=Double.parseDouble(in.getText().toString());
-                s=Math.pow(s,2);
-                out.setText(String.valueOf(s));
+                try {
+
+                    if (in.getText() == "") {
+                        Toast.makeText(MainActivity.this, "出现错误！请检查输入是否正确", Toast.LENGTH_LONG).show();
+                    } else {
+                        double s = Double.parseDouble(in.getText().toString());
+                        s = Math.pow(s, 2);
+                        out.setText(String.valueOf(s));
+                    }
+                }catch (Exception e){ Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();}
             }
         });
         buttonx3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double s=Double.parseDouble(in.getText().toString());
-                s=Math.pow(s,3);
-                out.setText(String.valueOf(s));
+                try {
+
+                if(in.getText()==""){
+                    Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
+                }else {
+                    double s = Double.parseDouble(in.getText().toString());
+                    s = Math.pow(s, 3);
+                    out.setText(String.valueOf(s));
+                }}catch (Exception e){ Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();}
             }
         });
         buttonloge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    double s=Double.parseDouble(in.getText().toString());
-                    s=Math.log(s);
+                try {
+
+                if(in.getText()==""){
+                    Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
+                }else {
+                    double s = Double.parseDouble(in.getText().toString());
+                    s = Math.log(s);
                     out.setText(String.valueOf(s));
+                }
+                }catch (Exception e){ Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();}
             }
         });
         buttonlog10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double s=Double.parseDouble(in.getText().toString());
-                s=Math.log10(s);
-                out.setText(String.valueOf(s));
+                try {
+
+                if(in.getText()==""){
+                    Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
+                }else {
+                    double s = Double.parseDouble(in.getText().toString());
+                    s = Math.log10(s);
+                    out.setText(String.valueOf(s));
+                }
+                }catch (Exception e){ Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();}
             }
         });
         buttonsqrt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double s=Double.parseDouble(in.getText().toString());
-                s=Math.sqrt(s);
-                out.setText(String.valueOf(s));
+                try {
+
+                if(in.getText()==""){
+                    Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
+                }else {
+                    double s = Double.parseDouble(in.getText().toString());
+                    s = Math.sqrt(s);
+                    out.setText(String.valueOf(s));
+                }
+                }catch (Exception e){ Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();}
             }
         });
         buttonto2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Integer i=Integer.parseInt(in.getText().toString());
-                out.setText(Integer.toBinaryString(i));
+                try{
+                if(in.getText()==""){
+                    Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
+                }else {
+                    Integer i = Integer.parseInt(in.getText().toString());
+                    out.setText(Integer.toBinaryString(i));
+                }
+                }catch (Exception e){ Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();}
             }
         });
         buttonto8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Integer i=Integer.parseInt(in.getText().toString());
-                out.setText(Integer.toOctalString(i));
+                try{
+                if(in.getText()==""){
+                    Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
+                }else {
+                    Integer i = Integer.parseInt(in.getText().toString());
+                    out.setText(Integer.toOctalString(i));
+                }
+                }catch (Exception e){ Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();}
             }
         });
         buttonto16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Integer i=Integer.parseInt(in.getText().toString());
-                out.setText(Integer.toHexString(i));
+                try{
+                if(in.getText()==""){
+                    Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
+                }else {
+                    Integer i = Integer.parseInt(in.getText().toString());
+                    out.setText(Integer.toHexString(i));
+                }
+                }catch (Exception e){ Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();}
             }
         });
         button2to10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Integer i=Integer.valueOf(in.getText().toString(),2);
-                out.setText(String.valueOf(i));
+                try {
+                    if(in.getText()==""){
+                        Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
+                    }else {
+                        char[] list = in.getText().toString().toCharArray();
+                        for (int last=0;last<list.length;last++) {
+                            char j = list[last];
+                            if( j == '2' || j == '3' || j == '4' || j == '5' || j == '6' || j == '7' || j == '8' || j == '9'){
+                                Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
+                                break;
+                            }
+                        }
+                        Integer i = Integer.valueOf(in.getText().toString(), 2);
+                        out.setText(String.valueOf(i));
+                    }
+
+                }catch (Exception e){ Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();}
+
+
             }
         });
         buttonequal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                try {
                 in.append("=");
                 char[] list = in.getText().toString().toCharArray();
                 int head =0;//head 表示开始（包含） last 表示尾（不包含）
@@ -302,135 +394,141 @@ public class MainActivity extends AppCompatActivity  {
                 double r=0;
                 double num1,num2;
                 boolean flag =false;//字符标志位
-                for (int last=0;last<list.length;last++) {
+//                try {
+                    for (int last = 0; last < list.length; last++) {
 
-                    char j = list[last];
-                    if (j == '0' || j == '1' || j == '2' || j == '3' || j == '4' || j == '5' || j == '6' || j == '7' || j == '8' || j == '9')
-                        flag = false;
-                    if (j == '+' || j == '-' || j == '*' || j == '/' || j == '=' || j == '(' || j == ')') {
+                        char j = list[last];
+                        if (j == '0' || j == '1' || j == '2' || j == '3' || j == '4' || j == '5' || j == '6' || j == '7' || j == '8' || j == '9')
+                            flag = false;
+                        if (j == '+' || j == '-' || j == '*' || j == '/' || j == '=' || j == '(' || j == ')') {
 
-                        if (opstack.isEmpty()) { //字符栈为空
-                            if (j == '(') {
-                                head = last + 1;
-                                opstack.push(j);
+                            if (opstack.isEmpty()) { //字符栈为空
+                                if (j == '(') {
+                                    head = last + 1;
+                                    opstack.push(j);
+                                } else {
+                                    try {
+                                    if (flag == false) { //有数字
+                                        num = getnum(list, head, last);
+                                        head = last + 1;
+                                        numstack.push(num);//数字 压栈
+                                        if (j == '(' || j == ')' || j == '=') {
+                                            //错误提示
+                                            Toast.makeText(MainActivity.this, "出现错误！请检查输入是否正确", Toast.LENGTH_LONG).show();
+                                        } else {
+                                            opstack.push(j);
+                                        }
+                                    } else {//没有数字
+                                        //错误提示
+                                        Toast.makeText(MainActivity.this, "出现错误！请检查输入是否正确", Toast.LENGTH_LONG).show();
+                                    }
+                                    }catch (Exception e){}
+                                }
                             } else {
                                 if (flag == false) { //有数字
                                     num = getnum(list, head, last);
                                     head = last + 1;
                                     numstack.push(num);//数字 压栈
-                                    if (j == '(' || j == ')' || j == '=') {
+                                    op1 = opstack.pop().toString().charAt(0);
+                                    op2 = j;
+                                    opresult = compare(op1, op2);
+                                    if (opresult == '>') {// >  运算
+                                        num2 = Double.parseDouble(numstack.pop().toString());
+                                        num1 = Double.parseDouble(numstack.pop().toString());
+                                        //运算
+                                        r = value(num1, op1, num2);
+                                        if (r != -0.00000000000054321) {
+                                            numstack.push(r);//结果压栈
+                                        } else {
+                                            //错误提示
+                                            Toast.makeText(MainActivity.this, "出现错误！请检查输入是否正确", Toast.LENGTH_LONG).show();
+                                        }
+                                        if (j == '=') {
+                                            num2 = Double.parseDouble(numstack.pop().toString());
+
+                                            while (numstack.isEmpty() == false) {
+                                                op1 = opstack.pop().toString().charAt(0);
+                                                while (op1 == '(' || op1 == ')') {
+                                                    op1 = opstack.pop().toString().charAt(0);
+                                                }
+
+                                                num1 = Double.parseDouble(numstack.pop().toString());
+                                                //运算
+                                                r = value(num1, op1, num2);
+                                                if (r != -0.00000000000054321) {
+                                                    numstack.push(r);//结果压栈
+                                                    num2 = Double.parseDouble(numstack.pop().toString());
+
+                                                } else {
+                                                    //错误提示
+                                                    Toast.makeText(MainActivity.this, "出现错误！请检查输入是否正确", Toast.LENGTH_LONG).show();
+                                                }
+                                            }
+                                            out.setText(String.valueOf(num2));
+                                            //                                        }
+                                        } else {
+                                            opstack.push(j);
+                                        }
+                                    } else if (opresult == '<') {
+                                        opstack.push(op1);
+                                        opstack.push(op2);
+                                    } else if (opresult == '~') {
                                         //错误提示
-                                        Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
+                                        Toast.makeText(MainActivity.this, "出现错误！请检查输入是否正确", Toast.LENGTH_LONG).show();
                                     } else {
-                                        opstack.push(j);
                                     }
                                 } else {//没有数字
-                                   //错误提示
-                                    Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
-                                }
-                            }
-                        } else {
-                            if (flag == false) { //有数字
-                                num = getnum(list, head, last);
-                                head = last + 1;
-                                numstack.push(num);//数字 压栈
-                                op1 = opstack.pop().toString().charAt(0);
-                                op2 = j;
-                                opresult = compare(op1, op2);
-                                if (opresult == '>') {// >  运算
-                                    num2 = Double.parseDouble(numstack.pop().toString());
-                                    num1 = Double.parseDouble(numstack.pop().toString());
-                                    //运算
-                                    r = value(num1, op1, num2);
-                                    if (r != -0.0000000000000001) {
-                                        numstack.push(r);//结果压栈
-                                    } else {
-                                        //错误提示
-                                        Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
-                                    }
-                                    if (j == '=') {
-                                        num2 = Double.parseDouble(numstack.pop().toString());
+                                    head = last + 1;
+                                    op1 = opstack.pop().toString().charAt(0);
+                                    op2 = j;
+                                    if (op1 == ')' || op2 == '(' || (op2 == '=' && op1 == ')')) {
+                                        if (op2 == '=') {
+                                            num2 = Double.parseDouble(numstack.pop().toString());
 
-                                        //                                        if(numstack.isEmpty()){
-
-                                        //                                        }else{
-                                        while (numstack.isEmpty() == false) {
-                                            op1 = opstack.pop().toString().charAt(0);
-                                            while (op1 == '(' || op1 == ')') {
-                                                op1 = opstack.pop().toString().charAt(0);
-                                            }
-                                            //                                            num2=Double.parseDouble(numstack.pop().toString());
-                                            num1 = Double.parseDouble(numstack.pop().toString());
-                                            //运算
-                                            r = value(num1, op1, num2);
-                                            if (r != -0.0000000000000001) {
-                                                numstack.push(r);//结果压栈
-                                                num2 = Double.parseDouble(numstack.pop().toString());
-                                                //                                                    op1=opstack.pop().toString().charAt(0);
-                                            } else {
-                                                //错误提示
-                                                Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
-                                            }
-                                        }
-                                        out.setText(String.valueOf(num2));
-                                        //                                        }
-                                    } else {
-                                        opstack.push(j);
-                                    }
-                                } else if (opresult == '<') {
-                                    opstack.push(op1);
-                                    opstack.push(op2);
-                                } else if (opresult == '~') {
-                                    //错误提示
-                                    Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
-                                } else {
-                                }
-                            } else {//没有数字
-                                head= last + 1;
-                                op1 = opstack.pop().toString().charAt(0);
-                                op2 = j;
-                                if (op1 == ')' || op2 == '(' || (op2 == '=' && op1 == ')')) {
-                                    if (op2 == '=') {
-                                        num2 = Double.parseDouble(numstack.pop().toString());
-                                        //                                        op1=
-//                                        if (numstack.isEmpty()) {
-
-//                                        } else {
-                                            while (numstack.isEmpty()==false){
+                                            while (numstack.isEmpty() == false) {
                                                 while (op1 == '(' || op1 == ')') {
                                                     op1 = opstack.pop().toString().charAt(0);
                                                 }
                                                 num1 = Double.parseDouble(numstack.pop().toString());
                                                 //运算
                                                 r = value(num1, op1, num2);
-                                                if (r != -0.0000000000000001) {
+                                                if (r != -0.00000000000054321) {
                                                     numstack.push(r);//结果压栈
                                                     num2 = Double.parseDouble(numstack.pop().toString());
                                                 } else {
                                                     //错误提示
-                                                    Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(MainActivity.this, "出现错误！请检查输入是否正确", Toast.LENGTH_LONG).show();
                                                 }
                                             }
-                                        out.setText(String.valueOf(num2));
+                                            out.setText(String.valueOf(num2));
 //                                        }
+                                        } else {
+                                            opstack.push(op1);
+                                            opstack.push(j);
+                                        }
+
                                     } else {
-                                        opstack.push(op1);
-                                        opstack.push(j);
+                                        //错误提示
+                                        Toast.makeText(MainActivity.this, "出现错误！请检查输入是否正确", Toast.LENGTH_LONG).show();
                                     }
 
-                                } else {
-                                    //错误提示
-                                    Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();
                                 }
 
                             }
-
+                            flag = true;
                         }
-                        flag = true;
+
                     }
 
-                }
-
+            }catch (Exception e){
+                    while (numstack.isEmpty()==false){
+                        numstack.pop();
+                    }
+                    while (opstack.isEmpty()==false){
+                        opstack.pop();
+                    }
+                    out.setText("");
+                    Toast.makeText(MainActivity.this,"出现错误！请检查输入是否正确",Toast.LENGTH_LONG).show();}
             }
         });
 
@@ -469,26 +567,16 @@ public class MainActivity extends AppCompatActivity  {
             case'-':return a - b;
             case'*':return a * b;
             case'/':return a / b;
-            default:return -0.0000000000000001;
+            default:return -0.00000000000054321;
         }
     }
     private double getnum(char[] list,int head,int last){
-//        char[] list = textview.getText().toString().toCharArray();
-//        int head =0;//head 表示开始（包含） i 表示尾（不包含）
         double r=0;
-//       for (int i=0;i<list.length;i++) {
-
-//            char j = list[last];
-        //           if(j=='+'||j=='-'||j=='*'||j=='/'||j=='='){
         //取出数组中【）中的内容
         char[] temp_list= Arrays.copyOfRange(list,head,last);
 //                head=last+1;//改变头 确定下一个范围的头
         String result=String.valueOf(temp_list);//char数组转String 或 String result =new String(temp_list);
-        // textview.append(result+"  ");
         r=Double.parseDouble(result);//string 转double
-
-        //           }
-        //      }
         return  r;
     }
 //    private char getop(char[] list,int head,int last){
