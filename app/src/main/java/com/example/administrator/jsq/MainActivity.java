@@ -1,8 +1,13 @@
 package com.example.administrator.jsq;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +20,10 @@ import java.util.Arrays;
 import java.util.Stack;
 
 public class MainActivity extends AppCompatActivity  {
+    private String urllength = "https://www.51240.com/apiiframe/?api_from=51240&api_url=https://changdu.51240.com/&api_width=98%&api_backgroundcolor=FFFFFF";
+    private String urltemperature = "https://www.51240.com/apiiframe/?api_from=51240&api_url=https://wendu.51240.com/&api_width=98%&api_backgroundcolor=FFFFFF";
+    private String urlweight = "https://www.51240.com/apiiframe/?api_from=51240&api_url=https://zhongliang.51240.com/&api_width=98%&api_backgroundcolor=FFFFFF";
+    private String urltime = "https://www.51240.com/apiiframe/?api_from=51240&api_url=https://shijian.51240.com/&api_width=98%&api_backgroundcolor=FFFFFF";
     Stack numstack =new Stack();//存放操作数
     Stack opstack = new Stack();//存放操作符
 
@@ -79,6 +88,10 @@ public class MainActivity extends AppCompatActivity  {
         Button buttonto8=(Button)findViewById(R.id.buttonto8);
         Button buttonto16=(Button)findViewById(R.id.buttonto16);
         Button button2to10=(Button)findViewById(R.id.button2to10);//2转10进制
+        Button buttonlength = (Button) findViewById(R.id.buttonlength);
+        Button buttontemperature = (Button) findViewById(R.id.buttontemperature);
+        Button buttonweight = (Button) findViewById(R.id.buttonweight);
+        Button buttontime = (Button) findViewById(R.id.buttontime);
 
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -382,6 +395,48 @@ public class MainActivity extends AppCompatActivity  {
 
             }
         });
+        buttonlength.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Thread intentbaidu = new Thread(new runurllength());
+                    intentbaidu.start();
+                } catch (Exception e) {
+                }
+            }
+        });
+        buttontemperature.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Thread intentbaidu = new Thread(new runurltemperature());
+                    intentbaidu.start();
+                } catch (Exception e) {
+                }
+            }
+        });
+        buttonweight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Thread intentbaidu = new Thread(new runurlweight());
+                    intentbaidu.start();
+                } catch (Exception e) {
+                }
+            }
+        });
+        buttontime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Thread intentbaidu = new Thread(new runurltime());
+                    intentbaidu.start();
+                } catch (Exception e) {
+                }
+            }
+        });
+
+
         buttonequal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -394,7 +449,7 @@ public class MainActivity extends AppCompatActivity  {
                 double r=0;
                 double num1,num2;
                 boolean flag =false;//字符标志位
-//                try {
+
                     for (int last = 0; last < list.length; last++) {
 
                         char j = list[last];
@@ -465,7 +520,12 @@ public class MainActivity extends AppCompatActivity  {
                                                 }
                                             }
                                             out.setText(String.valueOf(num2));
-                                            //                                        }
+                                            while (numstack.isEmpty() == false) {
+                                                numstack.pop();
+                                            }
+                                            while (opstack.isEmpty() == false) {
+                                                opstack.pop();
+                                            }
                                         } else {
                                             opstack.push(j);
                                         }
@@ -501,7 +561,12 @@ public class MainActivity extends AppCompatActivity  {
                                                 }
                                             }
                                             out.setText(String.valueOf(num2));
-//                                        }
+                                            while (numstack.isEmpty() == false) {
+                                                numstack.pop();
+                                            }
+                                            while (opstack.isEmpty() == false) {
+                                                opstack.pop();
+                                            }
                                         } else {
                                             opstack.push(op1);
                                             opstack.push(j);
@@ -575,12 +640,48 @@ public class MainActivity extends AppCompatActivity  {
         //取出数组中【）中的内容
         char[] temp_list= Arrays.copyOfRange(list,head,last);
 //                head=last+1;//改变头 确定下一个范围的头
-        String result=String.valueOf(temp_list);//char数组转String 或 String result =new String(temp_list);
-        r=Double.parseDouble(result);//string 转double
+        String result = String.valueOf(temp_list);
+        r = Double.parseDouble(result);
         return  r;
     }
-//    private char getop(char[] list,int head,int last){
-//        char j = list[last];
-//    }
 
+    class runurllength implements Runnable {//重写run 实现耗时运算
+
+        @Override
+        public void run() {
+            Uri uri = Uri.parse(urllength);
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        }
+    }
+
+    class runurltemperature implements Runnable {//重写run 实现耗时运算
+
+        @Override
+        public void run() {
+            Uri uri = Uri.parse(urltemperature);
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        }
+    }
+
+    class runurlweight implements Runnable {//重写run 实现耗时运算
+
+        @Override
+        public void run() {
+            Uri uri = Uri.parse(urlweight);
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        }
+    }
+
+    class runurltime implements Runnable {//重写run 实现耗时运算
+
+        @Override
+        public void run() {
+            Uri uri = Uri.parse(urltime);
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        }
+    }
 }

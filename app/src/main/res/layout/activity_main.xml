@@ -22,6 +22,23 @@
             android:layout_columnSpan="4"
             android:layout_gravity="fill"
             />
+
+        <Button
+            android:text="长度"
+            android:id="@+id/buttonlength" />
+
+        <Button
+            android:text="温度"
+            android:id="@+id/buttontemperature" />
+
+        <Button
+            android:text="质量"
+            android:id="@+id/buttonweight" />
+
+        <Button
+            android:text="时间"
+            android:id="@+id/buttontime" />
+
         <Button android:text="二进制" android:id="@+id/buttonto2"/>
         <Button android:text="八进制" android:id="@+id/buttonto8"/>
         <Button android:text="十六进制" android:id="@+id/buttonto16"/>
